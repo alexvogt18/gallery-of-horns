@@ -1,6 +1,5 @@
 import React from 'react';
-import './App.css';
-import CardColumns from 'react-bootstrap/CardColumns';
+import './hornedbeast.css';
 import Card from 'react-bootstrap/Card';
 
 class Beast extends React.Component {
@@ -8,7 +7,7 @@ class Beast extends React.Component {
     super(props);
     this.state = {
       voteCount: 0,
-      heart: ' '
+      heart: ''
     };
   }
 
@@ -22,21 +21,19 @@ class Beast extends React.Component {
 
   render() {
     return (
-      <CardColumns className="Beast">
-        <Card>
-          <Card.Img variant="top" onClick = {(e) => {this.addHeart(); this.addVote();}} alt={this.props.alt} title={this.props.title} src= {this.props.src} />
-          <Card.Body>
-            <Card.Title>{this.props.beast}</Card.Title>
-            <Card.Text>
-            {this.props.description}
-            </Card.Text>
-            <Card.Footer>
+      <Card>
+        <Card.Img variant="top" onClick = {(e) => {this.addHeart(); this.addVote();}} alt={this.props.alt} title={this.props.title} src= {this.props.src} />
+        <Card.Body>
+          <Card.Title>{this.props.title}</Card.Title>
+          <Card.Text>
+          {this.props.description}
+          </Card.Text>
+          <Card.Footer>
             {this.state.voteCount}
-              <Card.Img alt= 'Heart' title= 'Please vote for me!' src= {this.state.heart} />
-            </Card.Footer>
-          </Card.Body>
-        </Card>
-      </CardColumns>
+            <Card.Img class = 'heart_img' src= {this.state.heart} />
+          </Card.Footer>
+        </Card.Body>
+      </Card>
      );
    };
 };
