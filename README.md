@@ -45,3 +45,14 @@ Start time: 2000
 Finish time: 2145
 
 Actual time needed to complete: 1hr 45min
+
+<!-- ================================================================ -->
+Number and name of feature: Insert data.json file into App.js, pass down to main
+
+Estimate of time needed to complete: 60 min
+
+Start time: 2000
+
+Finish time: 2145
+
+Actual time needed to complete: 1hr 45min

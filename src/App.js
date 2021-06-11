@@ -3,6 +3,9 @@ import './App.css';
 import Header from './Header.js';
 import Footer from './Footer.js';
 import Main from './Main.js';
+import Data from './resources/data.json';
+import Select from './SelectedBeast.js';
+import HornNum from './HornNum.js';
 
 
 class App extends React.Component {
@@ -10,7 +13,9 @@ class App extends React.Component {
     return (
         <>
             <Header />
-            <Main />
+            <HornNum />
+            <Select />
+            <Main data= {Data} />
             <Footer />
         </>
     );
